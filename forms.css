@@ -1,0 +1,81 @@
+/* 
+ * Basic CSS for Assignments, syst10199 term 2.
+ * Wendi Jollymore, 2023
+
+ * Specific to forms.  Uses vars from main.css.
+ */
+
+form {
+    background-color: var(--highlight);
+    box-shadow: .4em .4em .2em #999;
+    display: inline-block;
+    padding: .7em;
+}
+
+form div,
+fieldset {
+    padding: .5em;
+}
+
+fieldset {
+    border: .05em dashed var(--main-color);
+    margin: .5em;
+}
+
+label {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+label,
+input,
+select {
+    display: block;
+}
+
+label {
+    margin-top: .7em;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset],
+button {
+    background: var(--main-color);
+    border: .2em solid var(--main-color);
+    border-radius: .5em;
+    color: var(--accent-color1);
+    font-weight: bold;
+    padding: .5em;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+button:hover {
+    background: var(--accent-color1);
+    color: var(--main-color);
+}
+
+ /* div for output */
+
+ form + div {
+    font-weight: bold;
+    margin: 1em .5em .5em .5em;
+    padding: .5em;
+ }
+ form + div > div {
+    margin: .2em;
+    padding: .2em;
+ }
+
+/* for larger screens */
+@media screen and (min-width: 768px) {
+
+    /* allow for rows of fields/labels */
+    label,
+    input,
+    select {
+        display: inline;
+    }
+}
